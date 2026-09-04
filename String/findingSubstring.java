@@ -20,3 +20,30 @@ public class Main
 		}
 	}
 }
+or
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    String str=sc.nextLine();
+	    String str1=sc.nextLine();
+	    boolean notSubstring=true;
+	    for(int i=0;i<str.length();i++){
+	         String empstr="";
+	        if(i<=str1.length()){
+	        for(int j=i;j<str1.length()+i;j++){
+	            empstr+=str.charAt(j);
+	        }
+	      if(str1.equals(empstr)){
+	          System.out.println("its a substring");
+	          notSubstring=false;
+	          break;
+	      }
+	        }
+	    }
+	 if(notSubstring){
+	     System.out.println("not a substring");
+	 }
+	}
+}	
