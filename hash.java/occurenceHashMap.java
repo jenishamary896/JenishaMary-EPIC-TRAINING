@@ -17,7 +17,7 @@ public class Main
 	      else{
 	         count=1;
 	      }
-	    map3.put(str.charAt(i),count);
+	    map3.put(ch,count);
 	  }
 	   System.out.println(map3);
 	}
