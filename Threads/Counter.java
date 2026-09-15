@@ -16,12 +16,14 @@ class MyThread1 extends Thread{
   }
 }
 public class Main{
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException{
         Counter count=new Counter();
         MyThread1 t1=new MyThread1(count);
         MyThread1 t2=new MyThread1(count);
         t1.start();
+        t1.join();
         t2.start();
+        t2.join();
         System.out.println(count.count);
     }
     
