@@ -19,5 +19,10 @@ public class Main
 		Node obj4 = new Node(40,null);
         obj3.address=obj4;
 		System.out.println(head.address.address.address.data);
+		Node temp=head;
+		while(temp!=null){
+			System.out.println(temp.data);
+			temp=temp.address;
+		}
 	}
 }
