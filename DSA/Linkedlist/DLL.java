@@ -153,6 +153,41 @@ public class Main
 		      }
 		  }
 		}
+
+		(or)
+
+		void insertDatainBetween(Scanner in){
+        System.out.println("Enter the data: ");
+        int val = in.nextInt();
+        Node newNode = new Node(null,val,null);
+        System.out.println("Enter the position: ");
+        int pos = in.nextInt();//4
+        if(pos==1){
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
+        }
+        else{
+            
+            Node temp = head;
+            for(int i=0;i<pos-2;i++){
+                temp = temp.next;
+            }
+            
+            if(temp.next==null){
+                temp.next = newNode;
+                newNode.prev = temp;
+                tail = newNode;
+            }
+            else{
+                newNode.prev = temp;
+                newNode.next = temp.next;
+                temp.next.prev = newNode;
+                temp.next = newNode;
+            }
+        }
+    }
+    
 		
 		
 		
